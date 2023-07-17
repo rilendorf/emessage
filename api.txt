@@ -1,0 +1,14 @@
+POST /auth/login/2
+{"username":"sendRUF","passwordHash":"38ec3d06496c26288290e5cd129c9cda3be82c4ce327618c573f70fae74c7370"}
+
+resp:
+	{"apiStatusCode":200,"data":{"username":"sendRUF","jwt":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNlbmRSVUYiLCJhY2Nlc3NTeXN0ZW1JZCI6MiwiZnVuY3Rpb25zIjpbeyJhY2Nlc3NGdW5jdGlvbklkIjoyMDEsImNoZWNrIjoxfSx7ImFjY2Vzc0Z1bmN0aW9uSWQiOjIwMywiY2hlY2siOjFsend9XSwiZXhwaXJlc0luIjoxODAwLCJpYXQiOjE2ODk1MjI3ODgsImV4cCI6MTY4OTUyNDU4OH0.APkecf4OP-U5DiRqtgzJxo3wQTGIVua_HWy92k4K5H4","functions":[{"accessFunctionId":201,"check":1},{"accessFunctionId":203,"check":1}]},"message":"OK"}
+
+dann
+POST /rs/ruf/send
+HEADER: "Authorization: Bearer *jwt*"
+
+{"identifier":"*number*","messageText":"*text goes here*"}
+
+resp:
+	{"apiStatusCode":200,"data":{"status":"success","trackingId":"*uuid*","recipients":[{"identifier":"*number*","statusSendMessage":"success"}]}}
