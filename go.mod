@@ -1,4 +1,4 @@
-module github.com/derzombiiie/emessage
+module github.com/rilendorf/emessage
 
 go 1.20
 

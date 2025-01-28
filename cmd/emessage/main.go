@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/derzombiiie/emessage"
+	"github.com/rilendorf/emessage"
 
 	"flag"
 	"fmt"
